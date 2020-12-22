@@ -1,0 +1,110 @@
+<!-- 
+
+- sign up html with Md bootstrap
+
+-->
+
+<!-------------------- Navbar file path----------------------->
+<%- include('../template/header')%>  
+<!------------------------------------------------------------>
+
+<!-------------------- Navbar file path----------------------->
+<%- include('../template/navbar')%>  
+<!------------------------------------------------------------>
+
+
+<div class="container-fluid" style="width: 100%;">
+
+<div class="row mt-5">
+ 
+    <div class="col-sm-3 col-md-3 mt-5" style="margin-top: 550px;">
+     <%- include('../template/alert')%>
+    </div>
+ 
+  
+<div class="col-md-6 ">
+   
+ 
+    <form action="/signup"   method="POST" enctype="multipart/form-data">
+
+      <div class="text-center mb-3">
+        <p>Sign up with:</p>
+       
+        <button type="button" class="btn btn-primary btn-floating mx-1">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+  
+        <button type="button" class="btn btn-primary btn-floating mx-1">
+          <i class="fab fa-google"></i>
+        </button>
+  
+        <button type="button" class="btn btn-primary btn-floating mx-1">
+          <i class="fab fa-twitter"></i>
+        </button>
+  
+        <button type="button" class="btn btn-primary btn-floating mx-1">
+          <i class="fab fa-github"></i>
+        </button>
+     
+      </div>
+  
+    
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="email" name="email" class="form-control" />
+          <label class="form-label" for="email">Email</label>
+        </div>
+    
+        <!------------------------ Password input--------------------->
+        <div class="form-outline mb-4">
+          <input type="password" id="password" name="password" class="form-control" />
+          <label class="form-label" for="password">Password</label>
+        </div>
+    
+        <!---------------------- Repeat Password input------------------>
+        <div class="form-outline mb-4">
+          <input type="password" name="confirm-password" id="confirm-password" class="form-control" />
+          <label class="form-label" for="confirm-password">Repeat password</label>
+        </div>
+        <!--------------------------------------------------------------> 
+    
+        <!------------------------ Checkbox----------------------------->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked aria-describedby="registerCheckHelpText"/>
+          <label class="form-check-label" for="registerCheck">
+            I have read and agree to the terms
+          </label>
+        </div>
+
+        <!--------------------------------------------------------------> 
+    
+        <!---------------------- Submit button-------------------------->
+        <div class="form-outline mb-4 d-grid gap-2">
+        <button type="submit" class="btn btn-secondary btn-lg block mb-3">
+            Sign Up
+          <i class="fas fa-sign-in-alt signup"></i>
+
+        </button>
+       
+       
+      </div>
+        <!-------------------------------------------------------------->  
+    </form>
+
+
+</div>
+
+</div>
+
+</div>
+
+<!-------------------- Navbar file path----------------------->
+<%- include('../template/footer')%>  
+<!------------------------------------------------------------>
+
+
+<!--
+
+   
+
+-->

@@ -1,0 +1,63 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+.alert{
+padding: 10px;
+background-color: #f0280e5e;
+color:#FFFFFF;
+box-shadow: rgb(252, 252, 252) 1px 2px 3px;
+border-radius: 5px;
+text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+z-index: 1;
+}
+.closebtn {
+margin-left: 15px;
+color: rgb(0, 0, 0);
+font-weight: bold;
+float: right;
+font-size: 22px;
+line-height: 20px;
+cursor: pointer;
+transition: 0.3s;
+}
+.closebtn:hover {
+color: black;
+}
+.alertt{
+
+ color: rgb(255, 230, 8) !important;
+
+ 
+}
+
+
+
+</style>
+
+<% if (locals.errors) { %>
+<% errors.forEach((err,i,{ [i - 1]:priv} ) => { %>
+ 
+ <% if (i==0) { %>
+
+  <i class="fas fa-exclamation-triangle alertt text-center" id="alertt"><p>!WARNING </p></i>
+  
+ <% } %>
+ 
+
+
+    <div class="alert  text-center flex-nowrap">
+     <span class="closebtn " id="xx" onclick=' this.parentElement.style.display="none"  '  >&times;</span>
+      <%= err.msg %> 
+    
+     
+     
+    </div>
+
+<% }) %>
+<% } %>
+
+
+
+
+
+  

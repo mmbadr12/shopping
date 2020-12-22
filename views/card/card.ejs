@@ -1,0 +1,63 @@
+<!--
+ 1-Loop pordct to pass data from sarver to html
+ 2-use styel bootstrap Split page 6 columnar for smul and 4 row for Medium
+-->
+
+<div class="container">
+
+  <% prodct.forEach(element => { %>
+
+   <div class="row mt-5">
+     <% element.forEach(prod => { %>
+         <div class="col-sm-6 col-md-4">
+         <div class="card cardPage">
+
+<!-------------------- Image <------------------------------->
+    <img src="<%=prod.imgPath%>" class="card-img-top" alt="Product">
+<!----------------------------------------------------------->
+
+       <div class="card-body" style="height: 200px;">
+
+       <!--------------------Title name product <------------->
+       <h5 class="card-title">Name:<%= prod.productName %> </h5>
+       <!-------------------------------------------------------->
+
+       <!----------------------Informations Data <--------------->
+                <p class="card-text">Information:
+                <%= prod.information.information %> <br>
+                <%= prod.information.Paperback %> <br>
+                <%= prod.information.kindleEdition %>
+                </p>
+       <!-------------------------------------------------------->
+
+        <!------------------MarketSize page <------------------->
+        <p class="card-text">MarketSize:<%=prod.MarketSize%></p>
+        <!-------------------------------------------------------->
+
+        <!-------------------Price <----------------------------->       
+        <p class="card-text">Price:<%=prod.price%></p>
+        <!-------------------------------------------------------->
+
+        <!-------------------buttn <------------------------------>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!-------------------------------------------------------->
+
+
+</div>
+</div>
+</div>
+
+<% }) %>
+
+</div>
+<% }) %>
+
+
+
+</div>
+
+
+
+
+
+
